@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Sales Chart</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        form { margin: 20px auto; max-width: 300px; }
+    </style>
+</head>
+<body>
+    <h1>Enter Sales Data</h1>
+    <form method="POST">
+        <label>Date: <input type="date" name="date" required></label><br>
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Daily Sales (AED): <input type="number" name="sales" required></label><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+        <h2>Performance:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
